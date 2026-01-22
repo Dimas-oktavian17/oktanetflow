@@ -6,6 +6,7 @@ export default defineConfig({
   description: "Personal Knowledge Summary & Network Visualization",
   cleanUrls: true,
   lastUpdated: true,
+  ignoreDeadLinks: true,
   themeConfig: {
     logo: "/oktanetflow.png",
     siteTitle: "Oktanetflow",
