@@ -7,7 +7,7 @@ hero:
   text: "Learning network together"
   tagline: Personal knowledge of networking
   image:
-    src: ./oktanetflow.png
+    src: /oktanetflow.png
     alt: "Oktanetflow"
   actions:
     - theme: brand
