@@ -1,0 +1,5 @@
+# Ignore all markdown files
+*.md
+
+# But keep index.md files (main pages)
+!**/index.md
