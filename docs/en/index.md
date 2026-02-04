@@ -20,11 +20,11 @@ hero:
 features:
   - icon: 🧠
     title: Personal Knowledge Summary
-    details: Mengubah tumpukan informasi mentah menjadi ringkasan yang terstruktur dan mudah dipahami.
+    details: Transforms a mountain of raw information into a structured, easy-to-understand summary.
   - icon: ✍️
     title: Human-Written Content
-    details: Prioritas pada kualitas narasi manusia yang otentik dengan kedalaman konteks personal.
+    details: Prioritizes the quality of authentic, human narratives with deep personal context..
   - icon: 🕸️
     title: Interactive Tech Visualizer
-    details: Alat visualisasi cerdas seperti VLSM Calculator dan diagram jaringan otomatis.
+    details: Intelligent visualization tools such as the VLSM Calculator and automated network diagrams..
 ---
