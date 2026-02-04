@@ -233,7 +233,7 @@ export default defineConfig({
     ],
 
     footer: {
-      message: "Human Written Content.",
+      message: "Beta Version",
       copyright: `Copyright © ${new Date().getFullYear()} Oktanetflow`,
     },
   },
