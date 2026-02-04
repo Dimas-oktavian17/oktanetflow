@@ -7,6 +7,17 @@ export default defineConfig({
   cleanUrls: true,
   lastUpdated: true,
   ignoreDeadLinks: true,
+  // internationalization
+  locales:{
+    root: {
+      label: "Indonesia",
+      lang: "id",
+    },
+    en: {
+      label: "English",
+      lang: "en",
+    },
+  }, 
   themeConfig: {
     logo: "/oktanetflow.png",
     siteTitle: "Oktanetflow",
