@@ -22,9 +22,9 @@ export default defineConfig({
     logo: "/oktanetflow.png",
     siteTitle: "Oktanetflow",
     lastUpdated: {
-      text: "Updated at",
+      text: "Last Updated:",
       formatOptions: {
-        dateStyle: "full",
+        dateStyle: "medium",
         timeStyle: "medium",
       },
     },
