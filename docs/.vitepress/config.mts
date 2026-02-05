@@ -200,7 +200,7 @@ export default defineConfig({
     },
 
     socialLinks: [
-      { icon: "github", link: "https://github.com/username/oktanetflow" },
+      { icon: "github", link: "https://github.com/Dimas-oktavian17/oktanetflow" },
     ],
 
     footer: {
