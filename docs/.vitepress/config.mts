@@ -7,13 +7,24 @@ export default defineConfig({
   cleanUrls: true,
   lastUpdated: true,
   ignoreDeadLinks: true,
+  // internationalization
+  locales:{
+    root: {
+      label: "Indonesia",
+      lang: "id",
+    },
+    en: {
+      label: "English",
+      lang: "en",
+    },
+  }, 
   themeConfig: {
     logo: "/oktanetflow.png",
     siteTitle: "Oktanetflow",
     lastUpdated: {
-      text: "Updated at",
+      text: "Last Updated:",
       formatOptions: {
-        dateStyle: "full",
+        dateStyle: "medium",
         timeStyle: "medium",
       },
     },
@@ -222,7 +233,7 @@ export default defineConfig({
     ],
 
     footer: {
-      message: "Human Written Content.",
+      message: "Beta Version",
       copyright: `Copyright © ${new Date().getFullYear()} Oktanetflow`,
     },
   },
