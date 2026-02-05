@@ -1,8 +1,7 @@
 # Ignore all markdown files
-*.md
 
 # But keep index.md files (main pages)
-!**/index.md
+
 
 # Dependency
 node_modules/
@@ -11,7 +10,6 @@ dist/
 .cache
 
 # VitePress specific
-.vitepress/dist
 .vitepress/cache
 
 # Environment variables (SANGAT PENTING)
