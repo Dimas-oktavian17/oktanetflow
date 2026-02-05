@@ -11,11 +11,11 @@ hero:
     alt: "Oktanetflow"
   actions:
     - theme: brand
-      text: Markdown Examples
-      link: /markdown-examples
+      text: Get Started
+      link: /guide/introduction
     - theme: alt
-      text: API Examples
-      link: /api-examples
+      text: GitHub
+      link: https://github.com/Dimas-oktavian17/oktanetflow
 
 features:
   - icon: 🧠
