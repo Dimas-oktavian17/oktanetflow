@@ -22,4 +22,4 @@ Kami sangat menghargai masukan dari pengguna. Jika Anda menemukan bug atau memil
 
 ---
 
-_Untuk changelog lengkap, kunjungi [repositori GitHub](https://github.com/username/oktanetflow)._
+_Untuk changelog lengkap, kunjungi [GitHub Releases](https://github.com/Dimas-oktavian17/oktanetflow/releases)._
