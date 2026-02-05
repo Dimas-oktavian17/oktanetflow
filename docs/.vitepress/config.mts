@@ -8,7 +8,7 @@ export default defineConfig({
   lastUpdated: true,
   ignoreDeadLinks: true,
   // internationalization
-  locales:{
+  locales: {
     root: {
       label: "Indonesia",
       lang: "id",
@@ -17,7 +17,7 @@ export default defineConfig({
       label: "English",
       lang: "en",
     },
-  }, 
+  },
   themeConfig: {
     logo: "/oktanetflow.png",
     siteTitle: "Oktanetflow",
@@ -32,11 +32,7 @@ export default defineConfig({
       {
         text: "Docs",
         activeMatch: "/guide/",
-        items: [
-          { text: "Introduction", link: "/guide/introduction" },
-          { text: "Knowledge Base", link: "/guide/network-basics" },
-          { text: "Archive", link: "/guide/archive" },
-        ],
+        items: [{ text: "Guide", link: "/guide/introduction" }],
       },
       {
         text: "Ecosystem",
@@ -51,6 +47,7 @@ export default defineConfig({
                 link: "/ecosystem/mikrotik/index",
               },
               { text: "Juniper Lab", link: "/ecosystem/juniper/index" },
+              { text: "Ruijie Lab", link: "/ecosystem/ruijie/index" },
             ],
           },
         ],
@@ -74,13 +71,34 @@ export default defineConfig({
 
     sidebar: {
       "/guide/": [
+        // Getting Started Section
         {
-          text: "Fundamentals",
+          text: "Getting Started",
+          items: [{ text: "Introduction", link: "/guide/introduction" }],
+        },
+        // Essential Networking Concepts Section
+        {
+          text: "Essential",
           items: [
-            { text: "Apa itu Oktanetflow?", link: "/guide/introduction" },
-            { text: "Getting Started", link: "/guide/getting-started" },
-            { text: "Network Basics", link: "/guide/network-basics" },
-            { text: "Human-Written Archive", link: "/guide/archive" },
+            { text: "TCP/UDP Concepts", link: "/guide/essentials/tcp-udp" },
+          ],
+        },
+        // Layer 2 Section
+        {
+          text: "Layer 2",
+          items: [
+            { text: "Switch Concepts", link: "/guide/layer-2/switch-concept" },
+            { text: "VLANs", link: "/guide/layer-2/vlans" },
+            { text: "STP (Spanning Tree)", link: "/guide/layer-2/stp" },
+          ],
+        },
+        // Layer 2 Section
+        {
+          text: "Layer 3",
+          items: [
+            { text: "Routing Concepts", link: "/guide/layer-3/routing" },
+            { text: "Static Routing", link: "/guide/layer-3/static-routing" },
+            { text: "Dynamic Routing", link: "/guide/layer-3/dynamic-routing" },
           ],
         },
       ],
@@ -92,6 +110,7 @@ export default defineConfig({
             { text: "Cisco Mastery", link: "/ecosystem/cisco/index" },
             { text: "MikroTik Essentials", link: "/ecosystem/mikrotik/index" },
             { text: "Juniper Lab", link: "/ecosystem/juniper/index" },
+            { text: "Ruijie Lab", link: "/ecosystem/ruijie/index" },
           ],
         },
       ],
@@ -103,13 +122,8 @@ export default defineConfig({
           text: "Cisco Mastery",
           collapsed: false,
 
-          items: [
-            { text: "← Back to Ecosystem", link: "/ecosystem/index" },
-            { text: "Introduction", link: "/ecosystem/cisco/index" },
-            { text: "Routing Concepts", link: "/ecosystem/cisco/routing" },
-          ],
+          items: [{ text: "Introduction", link: "/ecosystem/cisco/index" }],
         },
-
         {
           text: "Network Labs",
           collapsed: false, // User bisa buka-tutup menu ini
@@ -117,22 +131,6 @@ export default defineConfig({
             {
               text: "Lab 01: Dasar VLAN & Trunking",
               link: "/ecosystem/cisco/labs/lab-vlan",
-            },
-            {
-              text: "Lab 02: Inter-VLAN Routing",
-              link: "/ecosystem/cisco/labs/lab-inter-vlan",
-            },
-            {
-              text: "Lab 03: OSPF Single Area",
-              link: "/ecosystem/cisco/labs/lab-ospf",
-            },
-            {
-              text: "Lab 04: Standard ACL Security",
-              link: "/ecosystem/cisco/labs/lab-acl",
-            },
-            {
-              text: "Lab 05: NAT & PAT Configuration",
-              link: "/ecosystem/cisco/labs/lab-nat",
             },
           ],
         },
@@ -143,37 +141,16 @@ export default defineConfig({
         {
           text: "MikroTik Essentials",
           collapsed: false,
+          items: [{ text: "Introduction", link: "/ecosystem/mikrotik/index" }],
+        },
+        {
+          text: "Network Labs",
+          collapsed: false, // User bisa buka-tutup menu ini
           items: [
-            { text: "← Back to Ecosystem", link: "/ecosystem/index" },
-            { text: "Introduction", link: "/ecosystem/mikrotik/index" },
-            { text: "Routing Concepts", link: "/ecosystem/mikrotik/routing" },
-
-            {
-              text: "Network Labs",
-              collapsed: false, // User bisa buka-tutup menu ini
-              items: [
-                {
-                  text: "Lab 01: Dasar VLAN & Trunking",
-                  link: "/ecosystem/mikrotik/labs/lab-vlan",
-                },
-                {
-                  text: "Lab 02: Inter-VLAN Routing",
-                  link: "/ecosystem/mikrotik/labs/lab-inter-vlan",
-                },
-                {
-                  text: "Lab 03: OSPF Single Area",
-                  link: "/ecosystem/mikrotik/labs/lab-ospf",
-                },
-                {
-                  text: "Lab 04: Standard ACL Security",
-                  link: "/ecosystem/mikrotik/labs/lab-acl",
-                },
-                {
-                  text: "Lab 05: NAT & PAT Configuration",
-                  link: "/ecosystem/mikrotik/labs/lab-nat",
-                },
-              ],
-            },
+            // {
+            //   text: "Lab 01: Dasar VLAN & Trunking",
+            //   link: "/ecosystem/juniper/labs/lab-vlan",
+            // },
           ],
         },
       ],
@@ -183,47 +160,42 @@ export default defineConfig({
         {
           text: "Juniper Lab",
           collapsed: false,
-          items: [
-            { text: "← Back to Ecosystem", link: "/ecosystem/index" },
-            { text: "Introduction", link: "/ecosystem/juniper/index" },
-            { text: "Routing Concepts", link: "/ecosystem/juniper/routing" },
-          ],
+          items: [{ text: "Introduction", link: "/ecosystem/juniper/index" }],
         },
         {
           text: "Network Labs",
           collapsed: false, // User bisa buka-tutup menu ini
           items: [
-            {
-              text: "Lab 01: Dasar VLAN & Trunking",
-              link: "/ecosystem/juniper/labs/lab-vlan",
-            },
-            {
-              text: "Lab 02: Inter-VLAN Routing",
-              link: "/ecosystem/juniper/labs/lab-inter-vlan",
-            },
-            {
-              text: "Lab 03: OSPF Single Area",
-              link: "/ecosystem/juniper/labs/lab-ospf",
-            },
-            {
-              text: "Lab 04: Standard ACL Security",
-              link: "/ecosystem/juniper/labs/lab-acl",
-            },
-            {
-              text: "Lab 05: NAT & PAT Configuration",
-              link: "/ecosystem/juniper/labs/lab-nat",
-            },
+            // {
+            //   text: "Lab 01: Dasar VLAN & Trunking",
+            //   link: "/ecosystem/juniper/labs/lab-vlan",
+            // },
           ],
         },
       ],
 
+      // Sidebar Khusus Ruijie (Hanya tampil saat buka path /ecosystem/ruijie/...)
+      "/ecosystem/ruijie/": [
+        {
+          text: "Ruijie Lab",
+          collapsed: false,
+          items: [{ text: "Introduction", link: "/ecosystem/ruijie/index" }],
+        },
+        {
+          text: "Network Labs",
+          collapsed: false, // User bisa buka-tutup menu ini
+          items: [
+            // {
+            //   text: "Lab 01: Dasar VLAN & Trunking",
+            //   link: "/ecosystem/juniper/labs/lab-vlan",
+            // },
+          ],
+        },
+      ],
       "/tools/": [
         {
           text: "Interactive Tools",
-          items: [
-            { text: "VLSM Calculator", link: "/tools/vlsm" },
-            { text: "Topology Maker", link: "/tools/visualizer" },
-          ],
+          items: [{ text: "VLSM Calculator", link: "/tools/vlsm" }],
         },
       ],
     },
