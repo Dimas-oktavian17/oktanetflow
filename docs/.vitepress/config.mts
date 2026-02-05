@@ -55,8 +55,7 @@ export default defineConfig({
       {
         text: "Tools",
         items: [
-          { text: "VLSM Calculator", link: "/tools/vlsm" },
-          { text: "Topology Maker", link: "/tools/visualizer" },
+          { text: "VLSM Calculator", link: "/tools/vlsm" }
         ],
       },
       {
@@ -141,7 +140,7 @@ export default defineConfig({
         {
           text: "MikroTik Essentials",
           collapsed: false,
-          items: [{ text: "Introduction", link: "/ecosystem/mikrotik/index" }],
+          items: [{ text: "Introduction", link: "/ecosystem/juniper/index" }],
         },
         {
           text: "Network Labs",
