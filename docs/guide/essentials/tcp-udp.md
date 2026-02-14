@@ -2,16 +2,7 @@
 outline: deep
 ---
 
-# TCP/UDP Essentials <Badge type="warning" text="WIP" />
-
-
-::: warning 🚧 Under Construction
-This page is being actively developed. Content may be incomplete.
-
-**Status:** Draft  
-**Last updated:** Feb 2026  
-**ETA:** Feb 2026
-:::
+# TCP/UDP Essentials <Badge type="tip" text="beta" />
 
 ## TCP
 
@@ -43,4 +34,41 @@ sequenceDiagram
     Client-->>+Web-server: Send SYN Seq number = A
     Web-server-->>+Client: Send SYN number = B ACK Seq number = B
     Client-->>+Web-server: Seq number = A+1 ACK number = B+1
+```
+
+## UDP
+
+### 1. Konsep & Analogi
+::: info Definisi Singkat
+UDP adalah protokol transport yang tidak menjamin data sampai.
+:::
+
+* **Analogi:** Bayangkan seperti mengisi air tanpa memperdulikan apakah air sudah meluap."
+* **Karakteristik Utama:**
+    * Connectionless (Tidak perlu kenalan).
+    * Unreliable (Tidak ada garansi sampai).
+    * No Flow Control (Tidak ada kontrol penerima).
+
+### 2. Anatomi Header
+
+::: info UDP Header
+UDP hanya memiliki header 8 bytes.
+:::
+
+*Fokus pada bagian penting:*
+
+1.  **Source Port (16 bit):** Nomor port sumber pengirim.
+2.  **Destination Port (16 bit):** Nomor port tujuan penerima.
+
+
+### 3. Mekanisme Kerja (Mermaid Diagram)
+Bagaimana UDP mengirim dan menerima data?
+
+
+```mermaid
+sequenceDiagram
+    Client-->>+Web-server: Request
+    Web-server-->>+Client: Response
+    Web-server-->>+Client: Response
+    Web-server-->>+Client: Response
 ```
