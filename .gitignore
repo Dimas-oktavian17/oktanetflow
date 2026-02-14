@@ -9,8 +9,8 @@ dist/
 .temp
 .cache
 
-# VitePress specific
-.vitepress/cache
+# This covers the folder and everything inside it
+docs/.vitepress/cache/
 
 # Environment variables (SANGAT PENTING)
 .env
