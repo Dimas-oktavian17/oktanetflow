@@ -3,9 +3,13 @@ import type { Theme } from "vitepress";
 import DefaultTheme from "vitepress/theme";
 import { useData } from "vitepress";
 import { createMermaidRenderer } from "vitepress-mermaid-renderer";
-
+import { Button } from './components/ui/button'
+import './style.css'
 export default {
     extends: DefaultTheme,
+    enhanceApp({ app }) {
+    app.component('ButtonVue', Button)
+  },
     Layout: () => {
         const { isDark } = useData();
 
