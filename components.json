@@ -1,0 +1,17 @@
+{
+    "$schema": "https://shadcn-vue.com/schema.json",
+    "style": "new-york",
+    "typescript": true,
+    "tailwind": {
+        "config": "",
+        "css": ".vitepress/theme/style.css",
+        "baseColor": "neutral",
+        "cssVariables": true
+    },
+    "aliases": {
+        "components": "@/.vitepress/theme/components",
+        "utils": "@/.vitepress/theme/utils",
+        "ui": "@/.vitepress/theme/components/ui",
+        "lib": "@/.vitepress/theme/lib"
+    }
+}
