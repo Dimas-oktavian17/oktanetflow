@@ -8,6 +8,9 @@ importers:
 
   .:
     dependencies:
+      '@davidingplus/vitepress-image-viewer':
+        specifier: ^1.1.5
+        version: 1.1.5
       '@tailwindcss/vite':
         specifier: ^4.2.1
         version: 4.2.1(vite@7.3.1(jiti@2.6.1)(lightningcss@1.31.1))
@@ -79,6 +82,9 @@ packages:
 
   '@chevrotain/utils@11.0.3':
     resolution: {integrity: sha512-YslZMgtJUyuMbZ+aKvfF3x1f5liK4mWNxghFRv7jqRR9C3R3fAOGTTKvxXDa2Y1s9zSbcpuO0cAxDYsc9SrXoQ==}
+
+  '@davidingplus/vitepress-image-viewer@1.1.5':
+    resolution: {integrity: sha512-wnk1HcASQ7ym1S9Kef+92ZravrliLg1FBwfe9HgQhBjBy4Gp3DnzlXXMUDWjm3DLqfHaUnGMzMThtg5j1WopZw==}
 
   '@docsearch/css@4.5.3':
     resolution: {integrity: sha512-kUpHaxn0AgI3LQfyzTYkNUuaFY4uEz/Ym9/N/FvyDE+PzSgZsCyDH9jE49B6N6f1eLCm9Yp64J9wENd6vypdxA==}
@@ -1529,6 +1535,8 @@ snapshots:
   '@chevrotain/types@11.0.3': {}
 
   '@chevrotain/utils@11.0.3': {}
+
+  '@davidingplus/vitepress-image-viewer@1.1.5': {}
 
   '@docsearch/css@4.5.3': {}
 
