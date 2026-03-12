@@ -1,5 +1,6 @@
 import { defineConfig } from "vitepress";
-
+import tailwindcss from '@tailwindcss/vite';
+import { fileURLToPath, URL } from 'node:url';
 export default defineConfig({
   lang: "id-ID",
   title: "Oktanetflow",
@@ -124,12 +125,33 @@ export default defineConfig({
           items: [{ text: "Introduction", link: "/ecosystem/cisco/index" }],
         },
         {
+          base: "/ecosystem/cisco/labs/",
           text: "Network Labs",
-          collapsed: false, // User bisa buka-tutup menu ini
+          // collapsed: false, // User bisa buka-tutup menu ini
           items: [
             {
-              text: "Lab 01: Dasar VLAN & Trunking",
-              link: "/ecosystem/cisco/labs/lab-vlan",
+              text: "Switches",
+              items: [
+                { text: "Lab 01: Dasar Switch", link: "/switch/lab-switch-dasar" },
+              ]
+            },
+            {
+              text: "Vlans",
+              items: [
+                // { text: "Lab 01: Dasar Switch", link: "/switch/lab-switch-dasar" },
+              ]
+            },
+            {
+              text: "STP(Spanning Tree Protocol)",
+              items: [
+                // { text: "Lab 01: Dasar Switch", link: "/switch/lab-switch-dasar" },
+              ]
+            },
+            {
+              text: "Routers",
+              items: [
+                // { text: "Lab 01: Dasar Switch", link: "/switch/lab-switch-dasar" },
+              ]
             },
           ],
         },
@@ -208,4 +230,12 @@ export default defineConfig({
       copyright: `Copyright © ${new Date().getFullYear()} Oktanetflow`,
     },
   },
+  vite: {
+    plugins: [tailwindcss()],
+    resolve: {
+      alias: {
+        '@': fileURLToPath(new URL('../', import.meta.url))
+      }
+    }
+  }
 });
