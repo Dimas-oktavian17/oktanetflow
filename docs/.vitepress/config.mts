@@ -138,7 +138,7 @@ export default defineConfig({
             {
               text: "Vlans",
               items: [
-                // { text: "Lab 01: Dasar Switch", link: "/switch/lab-switch-dasar" },
+                { text: "Lab 01: Dasar VLAN & Trunking", link: "/vlan/lab-vlan-dasar-trunking" },
               ]
             },
             {
