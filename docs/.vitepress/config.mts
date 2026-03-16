@@ -1,6 +1,6 @@
 import { defineConfig } from "vitepress";
-import tailwindcss from '@tailwindcss/vite';
-import { fileURLToPath, URL } from 'node:url';
+import tailwindcss from "@tailwindcss/vite";
+import { fileURLToPath, URL } from "node:url";
 export default defineConfig({
   lang: "id-ID",
   title: "Oktanetflow",
@@ -21,7 +21,7 @@ export default defineConfig({
   },
   themeConfig: {
     search: {
-      provider: 'local'
+      provider: "local",
     },
     logo: "/oktanetflow.png",
     siteTitle: "Oktanetflow",
@@ -58,9 +58,7 @@ export default defineConfig({
       },
       {
         text: "Tools",
-        items: [
-          { text: "VLSM Calculator", link: "/tools/vlsm" }
-        ],
+        items: [{ text: "VLSM Calculator", link: "/tools/vlsm" }],
       },
       {
         text: "About",
@@ -135,26 +133,36 @@ export default defineConfig({
             {
               text: "Switches",
               items: [
-                { text: "Lab 01: Dasar Switch", link: "/switch/lab-switch-dasar" },
-              ]
+                {
+                  text: "Lab 01: Dasar Switch",
+                  link: "/switch/lab-switch-dasar",
+                },
+              ],
             },
             {
               text: "Vlans",
               items: [
-                { text: "Lab 01: Dasar VLAN & Trunking", link: "/vlan/lab-vlan-dasar-trunking" },
-              ]
+                {
+                  text: "Lab 01: Dasar VLAN & Trunking",
+                  link: "/vlan/lab-vlan-dasar-trunking",
+                },
+                {
+                  text: "Lab 02: Dasar VLAN ROAS(Router on a stick)",
+                  link: "/vlan/lab-vlan-dasar-roas",
+                },
+              ],
             },
             {
               text: "STP(Spanning Tree Protocol)",
               items: [
                 // { text: "Lab 01: Dasar Switch", link: "/switch/lab-switch-dasar" },
-              ]
+              ],
             },
             {
               text: "Routers",
               items: [
                 // { text: "Lab 01: Dasar Switch", link: "/switch/lab-switch-dasar" },
-              ]
+              ],
             },
           ],
         },
@@ -225,7 +233,10 @@ export default defineConfig({
     },
 
     socialLinks: [
-      { icon: "github", link: "https://github.com/Dimas-oktavian17/oktanetflow" },
+      {
+        icon: "github",
+        link: "https://github.com/Dimas-oktavian17/oktanetflow",
+      },
     ],
 
     footer: {
@@ -237,8 +248,8 @@ export default defineConfig({
     plugins: [tailwindcss()],
     resolve: {
       alias: {
-        '@': fileURLToPath(new URL('../', import.meta.url))
-      }
-    }
-  }
+        "@": fileURLToPath(new URL("../", import.meta.url)),
+      },
+    },
+  },
 });
