@@ -1,4 +1,5 @@
 ---
+outline: deep
 head:
   - - meta
     - name: description
