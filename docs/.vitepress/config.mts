@@ -227,7 +227,10 @@ export default defineConfig({
       "/tools/": [
         {
           text: "Interactive Tools",
-          items: [{ text: "VLSM Calculator", link: "/tools/vlsm" }],
+          items: [
+            { text: "VLSM Calculator", link: "/tools/vlsm" },
+            { text: "RDP Wrapper Configuration", link: "/tools/rdp-wrapper-configuration" },
+          ],
         },
       ],
     },
