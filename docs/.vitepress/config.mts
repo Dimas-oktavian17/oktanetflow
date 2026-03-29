@@ -173,16 +173,16 @@ export default defineConfig({
         {
           text: "MikroTik Essentials",
           collapsed: false,
-          items: [{ text: "Introduction", link: "/ecosystem/juniper/index" }],
+          items: [{ text: "Introduction", link: "/ecosystem/mikrotik/index" }],
         },
         {
           text: "Network Labs",
           collapsed: false, // User bisa buka-tutup menu ini
           items: [
-            // {
-            //   text: "Lab 01: Dasar VLAN & Trunking",
-            //   link: "/ecosystem/juniper/labs/lab-vlan",
-            // },
+            {
+              text: "Lab 01: Mikrotik Dasar Capstone(VLAN, OSPF, DHCP, ETC)",
+              link: "/ecosystem/mikrotik/labs/capstone/lab-dasar-capstone",
+            }
           ],
         },
       ],
