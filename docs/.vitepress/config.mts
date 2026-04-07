@@ -58,7 +58,10 @@ export default defineConfig({
       },
       {
         text: "Tools",
-        items: [{ text: "VLSM Calculator", link: "/tools/vlsm" }],
+        items: [
+        { text: "VLSM Calculator", link: "/tools/vlsm" },
+        { text: "RDP Wrapper Configuration", link: "/tools/rdp-wrapper-configuration" },
+        { text: "Bootable USB OS Installer", link: "/tools/bootable-usb-os-installer" },],
       },
       {
         text: "About",
@@ -229,7 +232,8 @@ export default defineConfig({
           text: "Interactive Tools",
           items: [
             { text: "VLSM Calculator", link: "/tools/vlsm" },
-            { text: "RDP Wrapper Configuration", link: "/tools/rdp-wrapper-configuration" },
+            { text: "RDP Wrapper Configuration", link: "/tools/rdp-wrapper-configuration" }, 
+            { text: "Bootable USB OS Installer", link: "/tools/bootable-usb-os-installer" }, 
           ],
         },
       ],
