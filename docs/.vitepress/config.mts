@@ -164,7 +164,7 @@ export default defineConfig({
             {
               text: "Routers",
               items: [
-                // { text: "Lab 01: Dasar Switch", link: "/switch/lab-switch-dasar" },
+                { text: "Lab 01: Static Routing Basics", link: "/routers/lab-static-routing" },
               ],
             },
           ],
@@ -185,7 +185,13 @@ export default defineConfig({
             {
               text: "Lab 01: Mikrotik Dasar Capstone(VLAN, OSPF, DHCP, ETC)",
               link: "/ecosystem/mikrotik/labs/capstone/lab-dasar-capstone",
-            }
+            },
+            {
+              text: "Routers",
+              items: [
+                { text: "Lab 01: Static Routing Basics", link: "/ecosystem/mikrotik/labs/routers/lab-static-routing" },
+              ],
+            },
           ],
         },
       ],
