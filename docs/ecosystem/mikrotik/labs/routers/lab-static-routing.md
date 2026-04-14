@@ -9,7 +9,7 @@ head:
       content: "Cisco Packet Tracer, Tutorial Switch, Networking Lab, MAC Address Table, Dasar Jaringan, Oktanetflow, Belajar Jaringan"
 ---
 
-# Lab 01: Dasar Static Routing
+# Lab 01: Dasar Static Routing <Badge type="warning" text="WIP"/>
 
 ## 1. Concept High-Level
 
