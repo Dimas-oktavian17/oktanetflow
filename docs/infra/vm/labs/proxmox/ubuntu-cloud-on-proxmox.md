@@ -75,29 +75,79 @@ VM>Options>Boot-order>Order>1>local-vmid-disk-id
 Note: Make sure the order is the same as the order in step 3.2, and uncheck the bootable checkbox except the first boot order.
 :::
 
-### Step 3.2 Boot Order
-```bash
-VM>Options>Boot-order>Order>1>local-vmid-disk-id
-```
-
-::: tip
-Note: Make sure the order is the same as the order in step 3.2, and uncheck the bootable checkbox except the first boot order.
-:::
-
 ### Step 3.3 Hardware Configuration
 ```bash
 VM>Hardware>Processors>x86-64-v2
 VM>Hardware>Add>Serial Port
+VM>Hardware>Add>Cloud Init
 ```
 
 ### Step 3.4 Cloud Init Configuration
 ```bash
 VM>Cloud Init>Add>password
 VM>Cloud Init>IP-config>assign static ip address
+VM>Cloud Init>Regenerate Image
 ```
 
 ::: info
 Note: Just ping random ip address range base on your network to know your ip address is available for ubuntu server.
+:::
+
+### Step 3.4 Disc Reconfiguration
+```bash
+root@ubuntu-server24:~# lsblk
+NAME    MAJ:MIN RM  SIZE RO TYPE MOUNTPOINTS
+sda       8:0    0  3.5G  0 disk
+├─sda1    8:1    0  2.5G  0 part /
+├─sda14   8:14   0    4M  0 part
+├─sda15   8:15   0  106M  0 part /boot/efi
+└─sda16 259:0    0  913M  0 part /boot
+sr0      11:0    1    4M  0 rom
+sr1      11:1    1 1024M  0 rom
+
+root@ubuntu-server24:~# df -h
+Filesystem      Size  Used Avail Use% Mounted on
+tmpfs           197M  1.1M  196M   1% /run
+/dev/sda1       2.4G  2.3G  115M  96% /
+tmpfs           984M     0  984M   0% /dev/shm
+tmpfs           5.0M     0  5.0M   0% /run/lock
+/dev/sda16      881M  117M  703M  15% /boot
+/dev/sda15      105M  6.2M   99M   6% /boot/efi
+tmpfs           197M   12K  197M   1% /run/user/0
+root@ubuntu-server24:~# growpart /dev/sda 1
+CHANGED: partition=1 start=2099200 old: size=5240799 end=7339998 new: size=9435103 end=11534302
+
+root@ubuntu-server24:~# df -h
+Filesystem      Size  Used Avail Use% Mounted on
+tmpfs           197M  1.1M  196M   1% /run
+/dev/sda1       2.4G  2.3G  115M  96% /
+tmpfs           984M     0  984M   0% /dev/shm
+tmpfs           5.0M     0  5.0M   0% /run/lock
+/dev/sda16      881M  117M  703M  15% /boot
+/dev/sda15      105M  6.2M   99M   6% /boot/efi
+tmpfs           197M   12K  197M   1% /run/user/0
+
+root@ubuntu-server24:~# resize2fs /dev/sda1
+resize2fs 1.47.0 (5-Feb-2023)
+Filesystem at /dev/sda1 is mounted on /; on-line resizing required
+old_desc_blocks = 1, new_desc_blocks = 1
+The filesystem on /dev/sda1 is now 1179387 (4k) blocks long.
+
+root@ubuntu-server24:~# df -h
+Filesystem      Size  Used Avail Use% Mounted on
+tmpfs           197M  1.1M  196M   1% /run
+/dev/sda1       4.3G  2.3G  2.1G  53% /
+tmpfs           984M     0  984M   0% /dev/shm
+tmpfs           5.0M     0  5.0M   0% /run/lock
+/dev/sda16      881M  117M  703M  15% /boot
+/dev/sda15      105M  6.2M   99M   6% /boot/efi
+tmpfs           197M   12K  197M   1% /run/user/0
+
+```
+
+::: info
+Note: VM>Hardware>Harddisk>Action>Resize
+Snapshots first before performing change 
 :::
 
 ## 4. Verification 
