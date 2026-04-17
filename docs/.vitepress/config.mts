@@ -67,6 +67,12 @@ export default defineConfig({
             ],
           },
           {
+            text: "Server",
+            items: [
+              { text: "Server Overview", link: "/infra/server/index" },
+            ],
+          },
+          {
             text: "Hardware",
             items: [
               { text: "Hardware Overview", link: "/infra/hardware/index" },
@@ -227,6 +233,7 @@ export default defineConfig({
           items: [
             { text: "Linux & Shell", link: "/infra/linux/index" },
             { text: "VM / Proxmox", link: "/infra/vm/index" },
+            { text: "Server", link: "/infra/server/index" },
             { text: "Hardware", link: "/infra/hardware/index" },
           ],
         },
@@ -273,6 +280,26 @@ export default defineConfig({
               items: [
                 { text: "MikroTik on Proxmox", link: "/infra/vm/labs/proxmox/mikrotik-on-proxmox" },
                 { text: "Ubuntu Cloud on Proxmox", link: "/infra/vm/labs/proxmox/ubuntu-cloud-on-proxmox" },
+              ],
+            },
+          ],
+        },
+      ],
+
+      "/infra/server/": [
+        {
+          text: "Server",
+          collapsed: false,
+          items: [{ text: "Overview", link: "/infra/server/index" }],
+        },
+        {
+          text: "Labs",
+          collapsed: false,
+          items: [
+            {
+              text: "server dell r620/r630",
+              items: [
+                { text: "Lab 01: Quick setup network and proxmox", link: "/infra/server/labs/dell-r620-r630/lab-01" },
               ],
             },
           ],
