@@ -78,6 +78,12 @@ export default defineConfig({
               { text: "Hardware Overview", link: "/infra/hardware/index" },
             ],
           },
+          {
+            text: "Software",
+            items: [
+              { text: "Software Overview", link: "/infra/software/index" },
+            ],
+          },
         ],
       },
       {
@@ -316,6 +322,21 @@ export default defineConfig({
         { text: "Labs", collapsed: false, items: [] },
       ],
 
+      "/infra/software/": [
+        {
+          text: "Software",
+          collapsed: false,
+          items: [{ text: "Overview", link: "/infra/software/index" }],
+        },
+        { text: "Labs", collapsed: false, items: [
+          {
+            text: "Microsoft Office",
+            items: [
+              { text: "Lab 01: Quick setup Microsoft Office", link: "/infra/software/labs/microsoft-office/lab-01-quick-setup-microsoft-office" },
+            ],
+          },
+        ] },
+      ],
       // ── TOOLS ─────────────────────────────────────────────────────────────
       "/tools/": [
         {
