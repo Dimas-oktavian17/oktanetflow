@@ -300,6 +300,7 @@ export default defineConfig({
               text: "server dell r620/r630",
               items: [
                 { text: "Lab 01: Quick setup network and proxmox", link: "/infra/server/labs/dell-r620-r630/lab-01" },
+                { text: "Lab 02: Quick setup debian iso", link: "/infra/server/labs/dell-r620-r630/lab-02" },
               ],
             },
           ],
