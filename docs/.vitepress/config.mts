@@ -59,6 +59,7 @@ export default defineConfig({
               { text: "Linux Overview", link: "/infra/linux/index" },
               { text: "Bash", link: "/infra/linux/labs/bash/" },
               { text: "SSH", link: "/infra/linux/labs/ssh/" },
+              { text: "Ubuntu", link: "/infra/linux/labs/ubuntu/lab-01-quick-ubuntu-2404-configuration-for-oldest-hardware" },
             ],
           },
           {
@@ -286,6 +287,12 @@ export default defineConfig({
               text: "SSH",
               items: [
                 // { text: "Lab 01: ...", link: "/infra/linux/labs/ssh/lab-01" },
+              ],
+            },
+            {
+              text: "Ubuntu",
+              items: [
+                { text: "Lab 01: Quick ubuntu 24.04 configuration for oldest hardware", link: "/infra/linux/labs/ubuntu/lab-01-quick-ubuntu-2404-configuration-for-oldest-hardware" },
               ],
             },
           ],
