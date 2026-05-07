@@ -39,7 +39,10 @@ export default defineConfig({
             text: "Device Based",
             items: [
               { text: "Cisco Mastery", link: "/ecosystem/cisco/index" },
-              { text: "MikroTik Essentials", link: "/ecosystem/mikrotik/index" },
+              {
+                text: "MikroTik Essentials",
+                link: "/ecosystem/mikrotik/index",
+              },
               { text: "Juniper Lab", link: "/ecosystem/juniper/index" },
               { text: "Ruijie Lab", link: "/ecosystem/ruijie/index" },
             ],
@@ -47,7 +50,7 @@ export default defineConfig({
         ],
       },
       {
-        text: "Infra",                          // ← NEW
+        text: "Infra", // ← NEW
         activeMatch: "/infra/",
         items: [
           {
@@ -62,15 +65,19 @@ export default defineConfig({
             text: "Virtualization",
             items: [
               { text: "VM Overview", link: "/infra/vm/index" },
-              { text: "Proxmox: MikroTik", link: "/infra/vm/labs/proxmox/mikrotik-on-proxmox" },
-              { text: "Proxmox: Ubuntu Cloud", link: "/infra/vm/labs/proxmox/ubuntu-cloud-on-proxmox" },
+              {
+                text: "Proxmox: MikroTik",
+                link: "/infra/vm/labs/proxmox/mikrotik-on-proxmox",
+              },
+              {
+                text: "Proxmox: Ubuntu Cloud",
+                link: "/infra/vm/labs/proxmox/ubuntu-cloud-on-proxmox",
+              },
             ],
           },
           {
             text: "Server",
-            items: [
-              { text: "Server Overview", link: "/infra/server/index" },
-            ],
+            items: [{ text: "Server Overview", link: "/infra/server/index" }],
           },
           {
             text: "Hardware",
@@ -106,7 +113,6 @@ export default defineConfig({
 
     // ─── SIDEBAR ────────────────────────────────────────────────────────────
     sidebar: {
-
       "/guide/": [
         {
           text: "Getting Started",
@@ -161,14 +167,23 @@ export default defineConfig({
             {
               text: "Switches",
               items: [
-                { text: "Lab 01: Dasar Switch", link: "/switch/lab-switch-dasar" },
+                {
+                  text: "Lab 01: Dasar Switch",
+                  link: "/switch/lab-switch-dasar",
+                },
               ],
             },
             {
               text: "VLANs",
               items: [
-                { text: "Lab 01: Dasar VLAN & Trunking", link: "/vlan/lab-vlan-dasar-trunking" },
-                { text: "Lab 02: VLAN ROAS", link: "/vlan/lab-vlan-dasar-roas" },
+                {
+                  text: "Lab 01: Dasar VLAN & Trunking",
+                  link: "/vlan/lab-vlan-dasar-trunking",
+                },
+                {
+                  text: "Lab 02: VLAN ROAS",
+                  link: "/vlan/lab-vlan-dasar-roas",
+                },
               ],
             },
             {
@@ -178,7 +193,10 @@ export default defineConfig({
             {
               text: "Routers",
               items: [
-                { text: "Lab 01: Static Routing Basics", link: "/routers/lab-static-routing" },
+                {
+                  text: "Lab 01: Static Routing Basics",
+                  link: "/routers/lab-static-routing",
+                },
               ],
             },
           ],
@@ -207,7 +225,10 @@ export default defineConfig({
             {
               text: "Routers",
               items: [
-                { text: "Lab 01: Static Routing Basics", link: "/ecosystem/mikrotik/labs/routers/lab-static-routing" },
+                {
+                  text: "Lab 01: Static Routing Basics",
+                  link: "/ecosystem/mikrotik/labs/routers/lab-static-routing",
+                },
               ],
             },
           ],
@@ -284,8 +305,14 @@ export default defineConfig({
             {
               text: "Proxmox",
               items: [
-                { text: "MikroTik on Proxmox", link: "/infra/vm/labs/proxmox/mikrotik-on-proxmox" },
-                { text: "Ubuntu Cloud on Proxmox", link: "/infra/vm/labs/proxmox/ubuntu-cloud-on-proxmox" },
+                {
+                  text: "MikroTik on Proxmox",
+                  link: "/infra/vm/labs/proxmox/mikrotik-on-proxmox",
+                },
+                {
+                  text: "Ubuntu Cloud on Proxmox",
+                  link: "/infra/vm/labs/proxmox/ubuntu-cloud-on-proxmox",
+                },
               ],
             },
           ],
@@ -305,8 +332,14 @@ export default defineConfig({
             {
               text: "server dell r620/r630",
               items: [
-                { text: "Lab 01: Quick setup network and proxmox", link: "/infra/server/labs/dell-r620-r630/lab-01" },
-                { text: "Lab 02: Quick setup debian iso", link: "/infra/server/labs/dell-r620-r630/lab-02" },
+                {
+                  text: "Lab 01: Quick setup network and proxmox",
+                  link: "/infra/server/labs/dell-r620-r630/lab-01",
+                },
+                {
+                  text: "Lab 02: Quick setup debian iso",
+                  link: "/infra/server/labs/dell-r620-r630/lab-02",
+                },
               ],
             },
           ],
@@ -328,14 +361,30 @@ export default defineConfig({
           collapsed: false,
           items: [{ text: "Overview", link: "/infra/software/index" }],
         },
-        { text: "Labs", collapsed: false, items: [
-          {
-            text: "Microsoft Office",
-            items: [
-              { text: "Lab 01: Quick setup Microsoft Office", link: "/infra/software/labs/microsoft-office/lab-01-quick-setup-microsoft-office" },
-            ],
-          },
-        ] },
+        {
+          text: "Labs",
+          collapsed: false,
+          items: [
+            {
+              text: "Microsoft Office",
+              items: [
+                {
+                  text: "Lab 01: Quick setup Microsoft Office",
+                  link: "/infra/software/labs/microsoft-office/lab-01-quick-setup-microsoft-office",
+                },
+              ],
+            },
+            {
+              text: "Conversion Partition",
+              items: [
+                {
+                  text: "Lab 02: Quick setup conversion partition",
+                  link: "/infra/software/labs/conversion-partition/lab-01-quick-setup-conversion-partition",
+                },
+              ],
+            },
+          ],
+        },
       ],
       // ── TOOLS ─────────────────────────────────────────────────────────────
       "/tools/": [
@@ -351,7 +400,10 @@ export default defineConfig({
     },
 
     socialLinks: [
-      { icon: "github", link: "https://github.com/Dimas-oktavian17/oktanetflow" },
+      {
+        icon: "github",
+        link: "https://github.com/Dimas-oktavian17/oktanetflow",
+      },
     ],
 
     footer: {
