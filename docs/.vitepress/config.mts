@@ -390,6 +390,15 @@ export default defineConfig({
                 },
               ],
             },
+            {
+              text: "Open VPN",
+              items: [
+                {
+                  text: "Lab 01: Quick setup Open VPN",
+                  link: "/infra/software/labs/open-vpn/lab-01-quick-setup-open-vpn",
+                },
+              ],
+            },
           ],
         },
       ],
