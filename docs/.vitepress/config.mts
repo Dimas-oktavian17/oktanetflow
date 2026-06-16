@@ -348,6 +348,10 @@ export default defineConfig({
                   text: "Lab 02: Quick setup debian iso",
                   link: "/infra/server/labs/dell-r620-r630/lab-02",
                 },
+                {
+                  text: "Lab 03: Initialize storage SSD/SATA",
+                  link: "/infra/server/labs/dell-r620-r630/lab-03-initialize-storage-ssd-sata",
+                },
               ],
             },
           ],
