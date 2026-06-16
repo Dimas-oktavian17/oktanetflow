@@ -293,6 +293,7 @@ export default defineConfig({
               text: "Ubuntu",
               items: [
                 { text: "Lab 01: Quick ubuntu 24.04 configuration for oldest hardware", link: "/infra/linux/labs/ubuntu/lab-01-quick-ubuntu-2404-configuration-for-oldest-hardware" },
+                { text: "Lab 02: Change Root Password", link: "/infra/linux/labs/ubuntu/lab-02-change-root-password" },
               ],
             },
           ],
