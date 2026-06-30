@@ -1,4 +1,4 @@
-import { defineConfig } from "vitepress";
+﻿import { defineConfig } from "vitepress";
 import tailwindcss from "@tailwindcss/vite";
 import { fileURLToPath, URL } from "node:url";
 
@@ -24,7 +24,7 @@ export default defineConfig({
       formatOptions: { dateStyle: "medium", timeStyle: "medium" },
     },
 
-    // ─── NAV ────────────────────────────────────────────────────────────────
+    // â”€â”€â”€ NAV â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
     nav: [
       {
         text: "Docs",
@@ -50,7 +50,7 @@ export default defineConfig({
         ],
       },
       {
-        text: "Infra", // ← NEW
+        text: "Infra", // â† NEW
         activeMatch: "/infra/",
         items: [
           {
@@ -90,6 +90,7 @@ export default defineConfig({
             text: "Software",
             items: [
               { text: "Software Overview", link: "/infra/software/index" },
+              { text: "SPSS & AMOS", link: "/infra/software/labs/spss-amos-crack/" },
             ],
           },
         ],
@@ -98,8 +99,8 @@ export default defineConfig({
         text: "Tools",
         items: [
           { text: "VLSM Calculator", link: "/tools/vlsm" },
-          { text: "RDP Wrapper", link: "/tools/rdp-wrapper" }, // ← refactored
-          { text: "Bootable USB Installer", link: "/tools/bootable-usb" }, // ← refactored
+          { text: "RDP Wrapper", link: "/tools/rdp-wrapper" }, // â† refactored
+          { text: "Bootable USB Installer", link: "/tools/bootable-usb" }, // â† refactored
         ],
       },
       {
@@ -112,7 +113,7 @@ export default defineConfig({
       },
     ],
 
-    // ─── SIDEBAR ────────────────────────────────────────────────────────────
+    // â”€â”€â”€ SIDEBAR â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
     sidebar: {
       "/guide/": [
         {
@@ -254,7 +255,7 @@ export default defineConfig({
         { text: "Network Labs", collapsed: false, items: [] },
       ],
 
-      // ── INFRA (new) ────────────────────────────────────────────────────────
+      // â”€â”€ INFRA (new) â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
       "/infra/": [
         {
           text: "Infra Overview",
@@ -405,17 +406,26 @@ export default defineConfig({
                 },
               ],
             },
+            {
+              text: "SPSS & AMOS",
+              items: [
+                {
+                  text: "Lab 01: Quick setup SPSS & AMOS",
+                  link: "/infra/software/labs/spss-amos-crack/lab-01-quick-setup-spss-amos",
+                },
+              ],
+            },
           ],
         },
       ],
-      // ── TOOLS ─────────────────────────────────────────────────────────────
+      // â”€â”€ TOOLS â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
       "/tools/": [
         {
           text: "Interactive Tools",
           items: [
             { text: "VLSM Calculator", link: "/tools/vlsm" },
-            { text: "RDP Wrapper", link: "/tools/rdp-wrapper" }, // ← refactored
-            { text: "Bootable USB Installer", link: "/tools/bootable-usb" }, // ← refactored
+            { text: "RDP Wrapper", link: "/tools/rdp-wrapper" }, // â† refactored
+            { text: "Bootable USB Installer", link: "/tools/bootable-usb" }, // â† refactored
           ],
         },
       ],
@@ -430,7 +440,7 @@ export default defineConfig({
 
     footer: {
       message: "Beta Version",
-      copyright: `Copyright © ${new Date().getFullYear()} Oktanetflow`,
+      copyright: `Copyright Â© ${new Date().getFullYear()} Oktanetflow`,
     },
   },
 
