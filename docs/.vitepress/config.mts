@@ -1,4 +1,4 @@
-import { defineConfig } from "vitepress";
+﻿import { defineConfig } from "vitepress";
 import tailwindcss from "@tailwindcss/vite";
 import { fileURLToPath, URL } from "node:url";
 
@@ -24,7 +24,7 @@ export default defineConfig({
       formatOptions: { dateStyle: "medium", timeStyle: "medium" },
     },
 
-    // ─── NAV ────────────────────────────────────────────────────────────────
+    // â”€â”€â”€ NAV â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
     nav: [
       {
         text: "Docs",
@@ -50,7 +50,7 @@ export default defineConfig({
         ],
       },
       {
-        text: "Infra", // ← NEW
+        text: "Infra", // â† NEW
         activeMatch: "/infra/",
         items: [
           {
@@ -90,6 +90,7 @@ export default defineConfig({
             text: "Software",
             items: [
               { text: "Software Overview", link: "/infra/software/index" },
+              { text: "SPSS & AMOS", link: "/infra/software/labs/spss-amos-crack/" },
             ],
           },
         ],
@@ -98,8 +99,8 @@ export default defineConfig({
         text: "Tools",
         items: [
           { text: "VLSM Calculator", link: "/tools/vlsm" },
-          { text: "RDP Wrapper", link: "/tools/rdp-wrapper" }, // ← refactored
-          { text: "Bootable USB Installer", link: "/tools/bootable-usb" }, // ← refactored
+          { text: "RDP Wrapper", link: "/tools/rdp-wrapper" }, // â† refactored
+          { text: "Bootable USB Installer", link: "/tools/bootable-usb" }, // â† refactored
         ],
       },
       {
@@ -112,7 +113,7 @@ export default defineConfig({
       },
     ],
 
-    // ─── SIDEBAR ────────────────────────────────────────────────────────────
+    // â”€â”€â”€ SIDEBAR â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
     sidebar: {
       "/guide/": [
         {
@@ -198,6 +199,10 @@ export default defineConfig({
                   text: "Lab 01: Static Routing Basics",
                   link: "/routers/lab-static-routing",
                 },
+                {
+                  text: "Lab 02: Dynamic Routing Basic",
+                  link: "/routers/lab-dynamic-routing-basic",
+                },
               ],
             },
           ],
@@ -230,6 +235,10 @@ export default defineConfig({
                   text: "Lab 01: Static Routing Basics",
                   link: "/ecosystem/mikrotik/labs/routers/lab-static-routing",
                 },
+                {
+                  text: "Lab 02: Dynamic Routing Basic",
+                  link: "/ecosystem/mikrotik/labs/routers/lab-dynamic-routing-basic",
+                },
               ],
             },
           ],
@@ -242,7 +251,25 @@ export default defineConfig({
           collapsed: false,
           items: [{ text: "Introduction", link: "/ecosystem/juniper/index" }],
         },
-        { text: "Network Labs", collapsed: false, items: [] },
+        {
+          text: "Network Labs",
+          collapsed: false,
+          items: [
+            {
+              text: "Routers",
+              items: [
+                {
+                  text: "Lab 01: Static Routing Basics",
+                  link: "/ecosystem/ruijie/labs/routers/lab-static-routing",
+                },
+                {
+                  text: "Lab 02: Dynamic Routing Basic",
+                  link: "/ecosystem/ruijie/labs/routers/lab-dynamic-routing-basic",
+                },
+              ],
+            },
+          ],
+        },
       ],
 
       "/ecosystem/ruijie/": [
@@ -251,10 +278,28 @@ export default defineConfig({
           collapsed: false,
           items: [{ text: "Introduction", link: "/ecosystem/ruijie/index" }],
         },
-        { text: "Network Labs", collapsed: false, items: [] },
+        {
+          text: "Network Labs",
+          collapsed: false,
+          items: [
+            {
+              text: "Routers",
+              items: [
+                {
+                  text: "Lab 01: Static Routing Basics",
+                  link: "/ecosystem/ruijie/labs/routers/lab-static-routing",
+                },
+                {
+                  text: "Lab 02: Dynamic Routing Basic",
+                  link: "/ecosystem/ruijie/labs/routers/lab-dynamic-routing-basic",
+                },
+              ],
+            },
+          ],
+        },
       ],
 
-      // ── INFRA (new) ────────────────────────────────────────────────────────
+      // â”€â”€ INFRA (new) â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
       "/infra/": [
         {
           text: "Infra Overview",
@@ -294,6 +339,7 @@ export default defineConfig({
               items: [
                 { text: "Lab 01: Quick ubuntu 24.04 configuration for oldest hardware", link: "/infra/linux/labs/ubuntu/lab-01-quick-ubuntu-2404-configuration-for-oldest-hardware" },
                 { text: "Lab 02: Change Root Password", link: "/infra/linux/labs/ubuntu/lab-02-change-root-password" },
+                { text: "Lab 03: Change Network and Nameserver", link: "/infra/linux/labs/ubuntu/lab-03-change-network-and-nameserver" },
               ],
             },
           ],
@@ -404,17 +450,26 @@ export default defineConfig({
                 },
               ],
             },
+            {
+              text: "SPSS & AMOS",
+              items: [
+                {
+                  text: "Lab 01: Quick setup SPSS & AMOS",
+                  link: "/infra/software/labs/spss-amos-crack/lab-01-quick-setup-spss-amos",
+                },
+              ],
+            },
           ],
         },
       ],
-      // ── TOOLS ─────────────────────────────────────────────────────────────
+      // â”€â”€ TOOLS â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
       "/tools/": [
         {
           text: "Interactive Tools",
           items: [
             { text: "VLSM Calculator", link: "/tools/vlsm" },
-            { text: "RDP Wrapper", link: "/tools/rdp-wrapper" }, // ← refactored
-            { text: "Bootable USB Installer", link: "/tools/bootable-usb" }, // ← refactored
+            { text: "RDP Wrapper", link: "/tools/rdp-wrapper" }, // â† refactored
+            { text: "Bootable USB Installer", link: "/tools/bootable-usb" }, // â† refactored
           ],
         },
       ],
@@ -429,7 +484,7 @@ export default defineConfig({
 
     footer: {
       message: "Beta Version",
-      copyright: `Copyright © ${new Date().getFullYear()} Oktanetflow`,
+      copyright: `Copyright Â© ${new Date().getFullYear()} Oktanetflow`,
     },
   },
 
