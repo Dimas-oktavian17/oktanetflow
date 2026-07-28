@@ -49,7 +49,7 @@ head:
 2. **Run Installer:** Right-click the primary `setup.exe` or installer file within the software folder and select **Run as Administrator**.
 3. **Follow Installation Wizard:** Proceed through the standard setup prompts. Accept the terms and click **Next** until the installation phase finishes.
 4. **Do Not Launch:** Uncheck any options to automatically launch or start the software application immediately upon completion. Click **Finish**.
-
+                  
 ### 2.2 License Bypass (Crack Integration)
 
 To activate the software without an official license authorization key, perform the manual file replacement workflow below:
