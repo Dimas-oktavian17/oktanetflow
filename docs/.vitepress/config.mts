@@ -199,6 +199,10 @@ export default defineConfig({
                   text: "Lab 01: Static Routing Basics",
                   link: "/routers/lab-static-routing",
                 },
+                {
+                  text: "Lab 02: Dynamic Routing Basic",
+                  link: "/routers/lab-dynamic-routing-basic",
+                },
               ],
             },
           ],
@@ -231,6 +235,10 @@ export default defineConfig({
                   text: "Lab 01: Static Routing Basics",
                   link: "/ecosystem/mikrotik/labs/routers/lab-static-routing",
                 },
+                {
+                  text: "Lab 02: Dynamic Routing Basic",
+                  link: "/ecosystem/mikrotik/labs/routers/lab-dynamic-routing-basic",
+                },
               ],
             },
           ],
@@ -243,7 +251,25 @@ export default defineConfig({
           collapsed: false,
           items: [{ text: "Introduction", link: "/ecosystem/juniper/index" }],
         },
-        { text: "Network Labs", collapsed: false, items: [] },
+        {
+          text: "Network Labs",
+          collapsed: false,
+          items: [
+            {
+              text: "Routers",
+              items: [
+                {
+                  text: "Lab 01: Static Routing Basics",
+                  link: "/ecosystem/ruijie/labs/routers/lab-static-routing",
+                },
+                {
+                  text: "Lab 02: Dynamic Routing Basic",
+                  link: "/ecosystem/ruijie/labs/routers/lab-dynamic-routing-basic",
+                },
+              ],
+            },
+          ],
+        },
       ],
 
       "/ecosystem/ruijie/": [
@@ -252,7 +278,25 @@ export default defineConfig({
           collapsed: false,
           items: [{ text: "Introduction", link: "/ecosystem/ruijie/index" }],
         },
-        { text: "Network Labs", collapsed: false, items: [] },
+        {
+          text: "Network Labs",
+          collapsed: false,
+          items: [
+            {
+              text: "Routers",
+              items: [
+                {
+                  text: "Lab 01: Static Routing Basics",
+                  link: "/ecosystem/ruijie/labs/routers/lab-static-routing",
+                },
+                {
+                  text: "Lab 02: Dynamic Routing Basic",
+                  link: "/ecosystem/ruijie/labs/routers/lab-dynamic-routing-basic",
+                },
+              ],
+            },
+          ],
+        },
       ],
 
       // â”€â”€ INFRA (new) â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
