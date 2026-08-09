@@ -3,15 +3,15 @@ outline: deep
 head:
   - - meta
     - name: description
-      content: "Belajar dasar static routing Mikrotik: Cara konfigurasi static routing dan verifikasi konektivitas antar router."
+      content: "Belajar dasar dynamic routing Cisco: Cara konfigurasi RIP dan verifikasi konektivitas antar router."
   - - meta
     - name: keywords
-      content: "Cisco Packet Tracer, Tutorial Switch, Networking Lab, MAC Address Table, Dasar Jaringan, Oktanetflow, Belajar Jaringan"
+      content: "Cisco Packet Tracer, Dynamic Routing, RIP, Networking Lab, Oktanetflow, Belajar Jaringan"
 ---
 
-# Lab 01: Dasar Static Routing <Badge type="warning" text="WIP"/>
+# Lab 02: Dasar Dynamic Routing <Badge type="warning" text="WIP"/>
 
-## 1. Concept High-Level <Badge type="warning" text="WIP>
+## 1. Concept High-Level <Badge type="warning" text="WIP"/>
 
 > **TL;DR:** -.
 
@@ -20,18 +20,15 @@ head:
 - **Why use it?** -
 
 ## 2. Lab Topology
-
-![alt text](lab-static-route-basic.png)
-
-| Device | Interface | IP Address  | Role              |
-| :----- | :-------- | :---------- | :---------------- |
-| R-A    | SE2/0     | 172.168.1.1 | Inter Router Link |
-| R-A    | FA0/0     | 192.168.1.1 | Acces Link        |
-| R-B    | SE2/0     | 172.168.1.2 | Inter Router Link |
-| R-B    | SE2/0     | 172.168.1.5 | Inter Router Link |
-| R-B    | FA0/0     | 192.168.2.1 | Acces Link        |
-| R-C    | SE2/0     | 172.168.1.6 | Inter Router Link |
-| R-C    | FA0/0     | 192.168.3.1 | Acces Link        |
+| Device | Interface | IP Address | Role |
+| :----- | :-------- | :-------------- | :--- |
+| R-A | SE2/0 | 172.168.1.1 | Inter Router Link |
+| R-A | FA0/0 | 192.168.1.1 | Acces Link |
+| R-B | SE2/0 | 172.168.1.2 | Inter Router Link |
+| R-B | SE2/0 | 172.168.1.5 | Inter Router Link |
+| R-B | FA0/0 | 192.168.2.1 | Acces Link |
+| R-C | SE2/0 | 172.168.1.6 | Inter Router Link |
+| R-C | FA0/0 | 192.168.3.1 | Acces Link |
 
 ## 3. Configuration Guide
 
@@ -74,22 +71,25 @@ Configure for each ports.
 Note: Use `no shutdown` for each ports after configured ip address, this will prevent the ports from shutting down.
 :::
 
-#### Step 2.2: Static Routing Configuration
+#### Step 2.2: Dynamic Routing Configuration (RIP)
 
 ```bash
 R-A>
 R-A>en
 R-A#conf t
 Enter configuration commands, one per line.  End with CNTL/Z.
-R-A(config)#ip route 192.168.2.0 255.255.255.0 172.168.1.2
-R-A(config)#ip route 192.168.3.0 255.255.255.0 172.168.1.2
+R-A(config)#router rip
+R-A(config-router)#version 2
+R-A(config-router)#no auto-summary
+R-A(config-router)#network 192.168.1.0
+R-A(config-router)#network 172.168.1.0
 etc... (Follow the same pattern with previous table topology)
 ```
 
 ::: tip
-Configure Static Routing.
+Configure Dynamic Routing with RIP.
 
-Note: netid netmask gateway
+Note: Use `version 2` for classless routing support and `no auto-summary` to disable automatic summarization.
 :::
 
 ## 4. Verification & Troubleshooting
@@ -102,11 +102,7 @@ Note: netid netmask gateway
 
 ## 5. My Personal Notes (The Oktanetflow Touch)
 
-- **Difficulty:** Easy
-- **Mistakes I Made:** Static Routing is a simple configuration, but difficult to manage when nodes are added or removed.
+- **Difficulty:** Medium
+- **Mistakes I Made:** Dynamic Routing is more complex than static, but easier to manage when nodes are added or removed.
 - **Related Resources:**
-  - [Static Routing](/guide/layer-3/static-routing)
-- **Downloads:**
-  <ButtonVue variant="secondary" as="a" class="no-underline!" href="./assets/lab-static-routing-basic/lab-static-route.pkt" download>
-  lab-static-route.pkt(Full Config)
-  </ButtonVue>
+  - [Dynamic Routing](/guide/layer-3/dynamic-routing)
