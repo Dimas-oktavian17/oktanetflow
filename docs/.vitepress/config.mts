@@ -1,4 +1,4 @@
-﻿import { defineConfig } from "vitepress";
+import { defineConfig } from "vitepress";
 import tailwindcss from "@tailwindcss/vite";
 import { fileURLToPath, URL } from "node:url";
 
@@ -59,7 +59,10 @@ export default defineConfig({
               { text: "Linux Overview", link: "/infra/linux/index" },
               { text: "Bash", link: "/infra/linux/labs/bash/" },
               { text: "SSH", link: "/infra/linux/labs/ssh/" },
-              { text: "Ubuntu", link: "/infra/linux/labs/ubuntu/lab-01-quick-ubuntu-2404-configuration-for-oldest-hardware" },
+              {
+                text: "Ubuntu",
+                link: "/infra/linux/labs/ubuntu/lab-01-quick-ubuntu-2404-configuration-for-oldest-hardware",
+              },
             ],
           },
           {
@@ -90,7 +93,10 @@ export default defineConfig({
             text: "Software",
             items: [
               { text: "Software Overview", link: "/infra/software/index" },
-              { text: "SPSS & AMOS", link: "/infra/software/labs/spss-amos-crack/" },
+              {
+                text: "SPSS & AMOS",
+                link: "/infra/software/labs/spss-amos-crack/",
+              },
             ],
           },
         ],
@@ -203,6 +209,14 @@ export default defineConfig({
                   text: "Lab 02: Dynamic Routing Basic",
                   link: "/routers/lab-dynamic-routing-basic",
                 },
+                {
+                  text: "Lab 03: Dynamic Routing Intermediate",
+                  link: "/routers/lab-dynamic-routing-intermediate",
+                },
+                {
+                  text: "Lab 04: Dynamic Routing Advanced",
+                  link: "/routers/lab-dynamic-routing-advanced",
+                },
               ],
             },
           ],
@@ -239,6 +253,14 @@ export default defineConfig({
                   text: "Lab 02: Dynamic Routing Basic",
                   link: "/ecosystem/mikrotik/labs/routers/lab-dynamic-routing-basic",
                 },
+                {
+                  text: "Lab 04: Dynamic Routing Intermediate",
+                  link: "/ecosystem/mikrotik/labs/routers/lab-dynamic-routing-intermediate",
+                },
+                {
+                  text: "Lab 03: Dynamic Routing Advanced",
+                  link: "/ecosystem/mikrotik/labs/routers/lab-dynamic-routing-advanced",
+                },
               ],
             },
           ],
@@ -266,6 +288,14 @@ export default defineConfig({
                   text: "Lab 02: Dynamic Routing Basic",
                   link: "/ecosystem/ruijie/labs/routers/lab-dynamic-routing-basic",
                 },
+                {
+                  text: "Lab 04: Dynamic Routing Intermediate",
+                  link: "/ecosystem/ruijie/labs/routers/lab-dynamic-routing-intermediate",
+                },
+                {
+                  text: "Lab 03: Dynamic Routing Advanced",
+                  link: "/ecosystem/ruijie/labs/routers/lab-dynamic-routing-advanced",
+                },
               ],
             },
           ],
@@ -292,6 +322,14 @@ export default defineConfig({
                 {
                   text: "Lab 02: Dynamic Routing Basic",
                   link: "/ecosystem/ruijie/labs/routers/lab-dynamic-routing-basic",
+                },
+                {
+                  text: "Lab 04: Dynamic Routing Intermediate",
+                  link: "/ecosystem/ruijie/labs/routers/lab-dynamic-routing-intermediate",
+                },
+                {
+                  text: "Lab 03: Dynamic Routing Advanced",
+                  link: "/ecosystem/ruijie/labs/routers/lab-dynamic-routing-advanced",
                 },
               ],
             },
@@ -337,9 +375,18 @@ export default defineConfig({
             {
               text: "Ubuntu",
               items: [
-                { text: "Lab 01: Quick ubuntu 24.04 configuration for oldest hardware", link: "/infra/linux/labs/ubuntu/lab-01-quick-ubuntu-2404-configuration-for-oldest-hardware" },
-                { text: "Lab 02: Change Root Password", link: "/infra/linux/labs/ubuntu/lab-02-change-root-password" },
-                { text: "Lab 03: Change Network and Nameserver", link: "/infra/linux/labs/ubuntu/lab-03-change-network-and-nameserver" },
+                {
+                  text: "Lab 01: Quick ubuntu 24.04 configuration for oldest hardware",
+                  link: "/infra/linux/labs/ubuntu/lab-01-quick-ubuntu-2404-configuration-for-oldest-hardware",
+                },
+                {
+                  text: "Lab 02: Change Root Password",
+                  link: "/infra/linux/labs/ubuntu/lab-02-change-root-password",
+                },
+                {
+                  text: "Lab 03: Change Network and Nameserver",
+                  link: "/infra/linux/labs/ubuntu/lab-03-change-network-and-nameserver",
+                },
               ],
             },
           ],
