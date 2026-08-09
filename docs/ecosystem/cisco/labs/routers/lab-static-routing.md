@@ -22,15 +22,16 @@ head:
 ## 2. Lab Topology
 
 ![alt text](lab-static-route-basic.png)
-| Device | Interface | IP Address | Role |
-| :----- | :-------- | :-------------- | :--- |
-| R-A | SE2/0 | 172.168.1.1 | Inter Router Link |
-| R-A | FA0/0 | 192.168.1.1 | Acces Link |
-| R-B | SE2/0 | 172.168.1.2 | Inter Router Link |
-| R-B | SE2/0 | 172.168.1.5 | Inter Router Link |
-| R-B | FA0/0 | 192.168.2.1 | Acces Link |
-| R-C | SE2/0 | 172.168.1.6 | Inter Router Link |
-| R-C | FA0/0 | 192.168.3.1 | Acces Link |
+
+| Device | Interface | IP Address  | Role              |
+| :----- | :-------- | :---------- | :---------------- |
+| R-A    | SE2/0     | 172.168.1.1 | Inter Router Link |
+| R-A    | FA0/0     | 192.168.1.1 | Acces Link        |
+| R-B    | SE2/0     | 172.168.1.2 | Inter Router Link |
+| R-B    | SE2/0     | 172.168.1.5 | Inter Router Link |
+| R-B    | FA0/0     | 192.168.2.1 | Acces Link        |
+| R-C    | SE2/0     | 172.168.1.6 | Inter Router Link |
+| R-C    | FA0/0     | 192.168.3.1 | Acces Link        |
 
 ## 3. Configuration Guide
 
@@ -106,6 +107,6 @@ Note: netid netmask gateway
 - **Related Resources:**
   - [Static Routing](/guide/layer-3/static-routing)
 - **Downloads:**
-  <ButtonVue variant="secondary" as="a" class="no-underline!" href="./lab-static-route.pkt" download>
+  <ButtonVue variant="secondary" as="a" class="no-underline!" href="./assets/lab-static-routing-basic/lab-static-route.pkt" download>
   lab-static-route.pkt(Full Config)
   </ButtonVue>
