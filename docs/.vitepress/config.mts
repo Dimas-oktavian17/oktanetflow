@@ -217,6 +217,10 @@ export default defineConfig({
                   text: "Lab 04: Dynamic Routing Advanced",
                   link: "/routers/lab-dynamic-routing-advanced",
                 },
+                {
+                  text: "Lab 05: Dynamic-Static Routing Basic",
+                  link: "/routers/lab-dynamic-static-routing-basic",
+                },
               ],
             },
           ],
