@@ -1,4 +1,4 @@
-﻿import { defineConfig } from "vitepress";
+import { defineConfig } from "vitepress";
 import tailwindcss from "@tailwindcss/vite";
 import { fileURLToPath, URL } from "node:url";
 
@@ -367,7 +367,10 @@ export default defineConfig({
             {
               text: "Bash",
               items: [
-                // { text: "Lab 01: ...", link: "/infra/linux/labs/bash/lab-01" },
+                {
+                  text: "Lab 01: Quick VM Create in Proxmox",
+                  link: "/infra/linux/labs/bash/lab-01-quick-vm-create-in-proxmox",
+                },
               ],
             },
             {
