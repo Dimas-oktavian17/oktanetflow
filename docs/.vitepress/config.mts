@@ -367,7 +367,10 @@ export default defineConfig({
             {
               text: "Bash",
               items: [
-                // { text: "Lab 01: ...", link: "/infra/linux/labs/bash/lab-01" },
+                {
+                  text: "Lab 01: Quick VM Create in Proxmox",
+                  link: "/infra/linux/labs/bash/lab-01-quick-vm-create-in-proxmox",
+                },
               ],
             },
             {
